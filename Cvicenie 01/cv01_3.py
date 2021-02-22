@@ -15,7 +15,7 @@ class Shared:
 
 # V kritickej oblasti sa nachadza len zapamatanie si indexu do pomocnej
 # premennej a jeho zvysenie. Vdaka tejto modifikaci si kazde vlakno seriovo vzdy
-# "zoberie" jeden index a zvysi counter, co znamena ze dalsie vlakno uz nebude
+# "zoberie" jeden index a zvysi counter, co znamena, ze dalsie vlakno uz nebude
 # moct pouzit ten isty index. Toto riesenie zarucuje integritu a paralelizmus
 # pretoze vlakna mozu sucasne vykonvat zapis dat do pola (v priapde ak by
 # python podporoval skutocny paralelizmus)

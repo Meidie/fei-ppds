@@ -15,9 +15,9 @@ class Shared:
 
 # While cyklus, ktory sa nachadza v kritickej oblasti bude vykonany seriovo to
 # znamena, ze ho vzdy cely vykona len jedno vlakno a az potom dalsie. Taketo
-# riesenie sice zarucuje integritu dat avsak kompletne eliminuje paralelizmus
-# vzhladom na to, ze ked pride rad na druhe vlakno counter uz bude na konci
-# pola a teda v pripade druheho vlakna bude hned zavolany break
+# riesenie sice zarucuje integritu dat avsak kompletne eliminuje paralelizmus.
+# Ked pride rad na druhe vlakno counter uz bude na konci pola a teda 
+# v pripade druheho vlakna sa hned zavola break.
 def counter(shared):
     shared.mutex.lock()
     while True:

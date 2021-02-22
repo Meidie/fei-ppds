@@ -14,11 +14,11 @@ class Shared:
 
 
 # Jedna cela iteracia vo while cykle sa nachadza v kritickej oblasti co
-# znamena ze sa bude vykonana seriovo. Toto riesenie zarucuje integritu dat
+# znamena, ze sa bude vykonavat seriovo. Toto riesenie zarucuje integritu dat
 # pretoze inkrementaciu countera a zapisovanie novej hodnoty do pola vykonava
-# vzdy len jedno vlakno, narozdiel od predchazajuceho riesenia obe vlakna
+# vzdy len jedno vlakno. Narozdiel od predchazajuceho riesenia obe vlakna
 # vykonavaju inkrementaciu a zapis, avsak kedze je cela logika inkrementacie
-# v kritickej oblasti, vykonava sa seriovo a vlakna sa len striedaju
+# v kritickej oblasti, vykonava sa seriovo a vlakna sa len striedaju.
 def counter(shared):
     while True:
         shared.mutex.lock()
