@@ -1,0 +1,1 @@
+# Cvicenie 3: Vypínač, P-K, Č-Z
