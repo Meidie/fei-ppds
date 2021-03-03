@@ -12,30 +12,44 @@ class LightSwitch:
         self.mutex.lock()
         self.counter += 1
         if self.counter == 1:
-            print("light up (thread: %d)" % thread_number)
+            print("First thread [%d] entered and"
+                  " turned on the light" % thread_number)
             semaphore.wait()
+        else:
+            (print("Thread [{0}] entered, {1} threads inside".format(
+                thread_number, self.counter))
+             if self.counter != 1
+             else print("Thread [{0}] entered, {1} thread inside".format(
+                thread_number, self.counter)))
         self.mutex.unlock()
 
     def unlock(self, semaphore, thread_number):
         self.mutex.lock()
         self.counter -= 1
         if self.counter == 0:
-            print("turn off (thread: %d)" % thread_number)
+            print("Last thread [%d] left and"
+                  " turned off the light" % thread_number)
             semaphore.signal()
+        else:
+            (print("Thread [{0}] left, {1} threads inside".format(
+                thread_number, self.counter))
+             if self.counter != 1
+             else print("Thread [{0}] left, {1} thread inside".format(
+                thread_number, self.counter)))
         self.mutex.unlock()
 
 
 def test_light_switch(ls, semaphore, thread_number):
+    sleep(randint(1, 10) / 10)
     ls.lock(semaphore, thread_number)
     sleep(randint(1, 10) / 10)
-    print("testing (thread: %d)" % thread_number)
     ls.unlock(semaphore, thread_number)
 
 
 switch = LightSwitch()
 sem = Semaphore(1)
 threads = list()
-for i in range(10):
+for i in range(5):
     t = Thread(test_light_switch, switch, sem, i)
     threads.append(t)
 
