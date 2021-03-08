@@ -15,11 +15,15 @@ class Warehouse:
         self.mutex = Mutex()
         self.items = Semaphore(0)
         self.free = Semaphore(capacity)
+        self.items_produced = 0
 
     def finish(self):
         self.end = True
         self.items.signal(50)
         self.free.signal(50)
+
+    def add_product(self):
+        self.items_produced += 1
 
 
 def produce(warehouse: Warehouse, thread_index):
@@ -31,7 +35,8 @@ def produce(warehouse: Warehouse, thread_index):
         # ziskanie vylucneho pristupu do skladu
         warehouse.mutex.lock()
         # ulozenie vyrobku do skladu
-        sleep(randint(0, 1) / 10)
+        warehouse.add_product()
+        # sleep(randint(0, 1) / 10)
         # odidenie zo skaldu
         warehouse.mutex.unlock()
         # zvysenie poctu vyrobkov v sklade
@@ -48,7 +53,7 @@ def consume(warehouse: Warehouse, thread_index):
         # ziskanie pristupu do skladu
         warehouse.mutex.lock()
         # ziskanie polozky
-        sleep(randint(0, 1) / 10)
+        # sleep(randint(0, 1) / 10)
         # odidenie zo skladu
         warehouse.mutex.unlock()
         # uvolnenie miesta v sklade
