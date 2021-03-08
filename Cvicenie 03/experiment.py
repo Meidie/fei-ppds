@@ -4,10 +4,7 @@ import matplotlib.pyplot as plt
 
 # Default parameters
 WAREHOUSE_CAPACITY = 10
-NUMBER_OF_PRODUCERS = 5
 NUMBER_OF_CONSUMERS = 5
-PRODUCTION_TIME = randint(0, 10) / 100
-PROCESSING_TIME = randint(0, 10) / 10
 OPERATING_TIME = 0.1
 TIME_DIVIDER = 200
 
@@ -33,8 +30,8 @@ class Warehouse:
 
     def finish(self):
         self.closed = True
-        self.items.signal(50)
-        self.free.signal(50)
+        self.items.signal(100)
+        self.free.signal(100)
 
     def add_product(self):
         self.items_produced += 1
@@ -110,8 +107,7 @@ def main():
                                production_time / TIME_DIVIDER))
 
                 for j in range(NUMBER_OF_CONSUMERS):
-                    consumers.append(
-                        Thread(consume, warehouse))
+                    consumers.append(Thread(consume, warehouse))
 
                 sleep(OPERATING_TIME)
                 warehouse.finish()
