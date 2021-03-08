@@ -1,5 +1,6 @@
 from fei.ppds import Thread, Mutex, Semaphore, print, randint
 from time import sleep
+import matplotlib.pyplot as plt
 
 # Default parameters
 WAREHOUSE_CAPACITY = 10
@@ -32,8 +33,8 @@ class Warehouse:
 
     def finish(self):
         self.closed = True
-        self.items.signal(100)
-        self.free.signal(100)
+        self.items.signal(50)
+        self.free.signal(50)
 
     def add_product(self):
         self.items_produced += 1
@@ -123,6 +124,23 @@ def main():
                                  number_of_producers, items_produced_avg))
             iteration += 1
             print("Iteration {0}/100".format(iteration))
+    plot(results.data)
+
+
+def plot(results):
+    fig = plt.figure()
+
+    ax = plt.gca(projection='3d')
+    ax.set_xlabel('Produkcia [s]]')
+    ax.set_ylabel('Počet producentov')
+    ax.set_zlabel('Počet výrobkov za sekundu')
+
+    x = [x[0] for x in results]
+    y = [y[1] for y in results]
+    z = [z[2] for z in results]
+
+    ax.plot_trisurf(x, y, z, cmap='viridis', edgecolor='none')
+    plt.show()
 
 
 if __name__ == "__main__":
