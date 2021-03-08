@@ -71,6 +71,9 @@ def main():
     for j in range(NUMBER_OF_CONSUMERS):
         consumers.append(Thread(consume, warehouse, j))
 
+    sleep(2)
+    warehouse.finish()
+
     for p in producers:
         p.join()
 
