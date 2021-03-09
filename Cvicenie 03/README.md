@@ -1,4 +1,4 @@
-# CviČenie 3: P-K experiment
+# Cvičenie 3: P-K experiment
 
 V rámci experimentu som sa rozhodol pozorovať ako sa mení množstvo vyrobených produktov ak sa dynamicky mení počet producentov a čas produkcie. Staticky som následne menil hodnoty pre veľkosť úložiska, počet konzumentov a pozoroval zmeny vo výstupných dátach. Interval v ktorom sa menil čas výroby produktu bol v rozmedzí <0.01, 0.1> s krokom 0.01. Interval počtu producentov sa pohyboval v rozmedzí od 1 po 10 s krokom 1.
 
