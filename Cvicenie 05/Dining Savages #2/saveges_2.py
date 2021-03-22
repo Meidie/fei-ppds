@@ -46,7 +46,7 @@ def cook(dinner: Dinner, cook_id):
         # varenie
         cooking(cook_id)
 
-        # počkanie kým všetci kuchári dokonćia svoju prácu
+        # počkanie kým všetci kuchári dokončia svoju prácu
         dinner.barrier.wait()
 
         dinner.cook_mutex.lock()
@@ -70,7 +70,7 @@ def savage(dinner: Dinner, savage_id):
         print(f"divoch {savage_id}: pocet porcii v hrnci je {dinner.servings}")
         if dinner.servings == 0:
             print(f"divoch {savage_id}: budim kucharov")
-            # nabitie semaforu na poćet kuchárov
+            # nabitie semaforu na počet kuchárov
             dinner.empty_pot.signal(N_COOKS)
             dinner.full_pot.wait()
         dinner.get_serving_from_pot(savage_id)
