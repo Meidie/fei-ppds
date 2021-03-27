@@ -7,3 +7,4 @@ Paralelné programovanie a distribuované systémy
 3. cvičenie - [Vypínač, P-K, Č-Z](https://uim.fei.stuba.sk/i-ppds/3-cvicenie-fibonacci-vypinac-p-k-c-z-%f0%9f%92%a1/?%2F)
 4. cvičenie - [Večerajúci filozofi, atómová elektráreň](https://uim.fei.stuba.sk/i-ppds/4-cvicenie-vecerajuci-filozofi-atomova-elektraren-%f0%9f%8d%bd%ef%b8%8f/)
 5. cvičenie - [Problém fajčiarov, problém divochov](https://uim.fei.stuba.sk/i-ppds/5-cvicenie-problem-fajciarov-problem-divochov-%f0%9f%9a%ac/)
+6. cvičenie - [Menej klasické synchronizačné problémy](https://uim.fei.stuba.sk/i-ppds/6-cvicenie-menej-klasicke-synchronizacne-problemy/)
