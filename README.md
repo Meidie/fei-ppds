@@ -8,3 +8,4 @@ Paralelné programovanie a distribuované systémy
 4. cvičenie - [Večerajúci filozofi, atómová elektráreň](https://uim.fei.stuba.sk/i-ppds/4-cvicenie-vecerajuci-filozofi-atomova-elektraren-%f0%9f%8d%bd%ef%b8%8f/)
 5. cvičenie - [Problém fajčiarov, problém divochov](https://uim.fei.stuba.sk/i-ppds/5-cvicenie-problem-fajciarov-problem-divochov-%f0%9f%9a%ac/)
 6. cvičenie - [Menej klasické synchronizačné problémy](https://uim.fei.stuba.sk/i-ppds/6-cvicenie-menej-klasicke-synchronizacne-problemy/)
+7. cvičenie - [Asynchrónne programovanie v Pythone pomocou koprogramov (cez rozšírené generátory)](https://uim.fei.stuba.sk/i-ppds/7-cvicenie/)
