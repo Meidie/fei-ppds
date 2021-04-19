@@ -9,3 +9,4 @@ Paralelné programovanie a distribuované systémy
 5. cvičenie - [Problém fajčiarov, problém divochov](https://uim.fei.stuba.sk/i-ppds/5-cvicenie-problem-fajciarov-problem-divochov-%f0%9f%9a%ac/)
 6. cvičenie - [Menej klasické synchronizačné problémy](https://uim.fei.stuba.sk/i-ppds/6-cvicenie-menej-klasicke-synchronizacne-problemy/)
 7. cvičenie - [Asynchrónne programovanie v Pythone pomocou koprogramov (cez rozšírené generátory)](https://uim.fei.stuba.sk/i-ppds/7-cvicenie/)
+8. cvičenie - [Asynchrónne programovanie](https://uim.fei.stuba.sk/i-ppds/8-cvicenie-asynchronne-programovanie/)
