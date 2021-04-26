@@ -1,5 +1,5 @@
 # PPDS
-Paralelné programovanie a distribuované systémy
+Paralelné programovanie a distribuované systémy (FEI - LS 2020/2021)
 
 ### Zadania:
 1. cvičenie - [Oboznámenie sa s prostredím](https://uim.fei.stuba.sk/i-ppds/1-cvicenie-oboznamenie-sa-s-prostredim-%f0%9f%90%8d/)
@@ -10,3 +10,4 @@ Paralelné programovanie a distribuované systémy
 6. cvičenie - [Menej klasické synchronizačné problémy](https://uim.fei.stuba.sk/i-ppds/6-cvicenie-menej-klasicke-synchronizacne-problemy/)
 7. cvičenie - [Asynchrónne programovanie v Pythone pomocou koprogramov (cez rozšírené generátory)](https://uim.fei.stuba.sk/i-ppds/7-cvicenie/)
 8. cvičenie - [Asynchrónne programovanie](https://uim.fei.stuba.sk/i-ppds/8-cvicenie-asynchronne-programovanie/)
+9. cvičenie - [CUDA pomocou Numba](https://uim.fei.stuba.sk/i-ppds/9-cvicenie-cuda-pomocou-numba/)
