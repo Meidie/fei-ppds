@@ -8,18 +8,20 @@ def is_prime(primes, results):
     num = primes[cuda.grid(1)]
     flag = True
 
-    if num > 1:
+    if num > 3:
         sqrt_x = math.ceil(math.sqrt(num))
-        for i in range(2, sqrt_x):
+        for i in range(2, sqrt_x + 1):
             if (num % i) == 0:
                 flag = False
                 break
+    elif num <= 1:
+        flag = False
 
     results[num] = flag
 
 
 def main():
-    numbers = np.random.randint(1000000, 9999999999999, size=320,
+    numbers = np.random.randint(1_000_000, 9_999_999_999_999, size=320,
                                 dtype=np.int64)
     results = dict()
 
