@@ -44,7 +44,7 @@ Total elapsed time:  5.2
 #### Záver
 
 Z časových výsledok je možné vidieť, že asynchrónna implementácia je rýchlejšia ako synchrónna.
-Pri synchrónnej implantácii sa jednotlivé tasky vykonávajú jeden po druhom, pri asynchrónnej implementácii sa môžu tasky vykonávať konkurentne keďže nedochádza k blokovaniu behu programu, ale len samostatných taskov, čo znamená, že ak je jeden task blokovaný ďalšie môžu pokračovať.
+Pri synchrónnej implementácii sa jednotlivé tasky vykonávajú jeden po druhom, pri asynchrónnej implementácii sa môžu tasky vykonávať konkurentne keďže nedochádza k blokovaniu behu programu, ale len samostatných taskov, čo znamená, že ak je jeden task blokovaný ďalšie môžu pokračovať.
 
 Pri menších prednastavených hodnotách by bol výsledný časový rozdiel malý a do istej mieri až zanedbateľný. Naopak pri väčších prednastavených hodnotách by sa rozdiel nestále zväčšoval v prospech asynchrónnej implementácie.
 
